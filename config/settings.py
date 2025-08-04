@@ -11,8 +11,8 @@ OPENAI_EMBEDDING_MODEL = "text-embedding-3-small"
 
 # LangChain Configuration
 CHUNK_SIZE = 1000
-CHUNK_OVERLAP = 200
-SEPARATOR = "\n"
+CHUNK_OVERLAP = 100
+SEPARATOR = ["\n\n","\n","."," ", ""]
 
 # File Upload Configuration
 ALLOWED_FILE_TYPES = ["pdf"]
