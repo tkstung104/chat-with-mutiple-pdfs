@@ -8,9 +8,9 @@ from config.settings import MEMORY_KEY
 def handle_userinput(user_question):
     # Invoke conversation chain to get response and update memory
     response = st.session_state.conversation.invoke({'question': user_question})
+
+    # Get updated chat history from conversation memory 
     st.session_state.conversation_messages = response[MEMORY_KEY]
-    # Get updated chat history from conversation memory
-    # conversation_messages = st.session_state.conversation.memory.chat_memory.messages
     
     # Display full chat history
     for i, message in enumerate(st.session_state.conversation_messages):
